@@ -7,7 +7,7 @@ jdk:
 # `openjdk8` not available
 
 before_install:
-- git clone https://github.com/krichter722/maven-parent && cd maven-parent && mvn install && cd ..
+- git clone --recursive https://github.com/krichter722/maven-parent && cd maven-parent && mvn install && cd ..
 
 install: /bin/true
 

@@ -7,3 +7,6 @@
 [submodule "message-handler-parent"]
 	path = message-handler-parent
 	url = https://github.com/document-scanner/message-handler-parent.git
+[submodule "checkstyle-config"]
+	path = checkstyle-config
+	url = https://gitlab.com/krichter/checkstyle-config.git
