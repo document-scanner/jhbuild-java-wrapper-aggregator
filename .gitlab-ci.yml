@@ -1,0 +1,11 @@
+main:
+    image: maven:3.5.2-jdk-8-slim
+        # - `maven:slim` doesn't point to the latest version
+        # - based on Debian stretch
+    script:
+        - apt-get update && apt-get install --yes git openjfx dash bash make gcc
+        - apt-get install --yes python
+            # necessary until runtime failure of jhbuild HTTPS downloads due to `<urlopen error [SSL: NO_CIPHERS_AVAILABLE] no ciphers available (_ssl.c:661)` occur, see https://stackoverflow.com/questions/48941028/python-https-download-fails-due-to-urlopen-error-ssl-no-ciphers-available-n for input
+        - git submodule update --init --recursive
+        - git clone --recursive https://github.com/krichter722/maven-parent.git && cd maven-parent && mvn --batch-mode install && cd ..
+        - env JHBUILD_RUN_AS_ROOT= mvn --batch-mode install
