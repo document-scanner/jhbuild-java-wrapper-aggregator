@@ -10,3 +10,6 @@
 [submodule "checkstyle-config"]
 	path = checkstyle-config
 	url = https://gitlab.com/krichter/checkstyle-config.git
+[submodule "execution-tools"]
+	path = execution-tools
+	url = https://gitlab.com/krichter/execution-tools.git

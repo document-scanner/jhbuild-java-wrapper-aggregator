@@ -11,6 +11,7 @@
     <modules>
         <module>swing-worker-get-wait-dialog</module>
         <module>message-handler-parent</module>
+        <module>execution-tools</module>
         <module>jhbuild-java-wrapper</module>
     </modules>
 </project>
